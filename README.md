@@ -9,8 +9,9 @@ Quick example of running Apollo GraphQL server on Cloud Run.
 1. Create a `package.json` via `npm init -y`
 2. Install the libraries needed via `npm i apollo-server-express express graphql`
 3. (Optional) Modify the `index.js` to use something other than dummy data included
-4. Deploy with Cloud run: `gcloud run deploy graphqlserver --source . --region us-central1 --allow-unauthenticated`
-5. Query!
+4. Make sure the `package.json` has a `start` script pointing to `index.js` <- Cloud Run will need this to start the server
+5. Deploy with Cloud run: `gcloud run deploy graphqlserver --source . --region us-central1 --allow-unauthenticated`
+6. Query!
 
 
 ### Example
